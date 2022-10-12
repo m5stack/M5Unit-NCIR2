@@ -83,12 +83,12 @@ void loop() {
     canvas.setTextColor(WHITE);
     canvas.printf("Temp:");
     canvas.setTextColor(GREEN);
-    canvas.printf("%d", temperature);
+    canvas.printf("%.2f", ((float)temperature)/100);
     canvas.setCursor(0, 60);
     canvas.setTextColor(RED);
-    canvas.printf("HighAlarm:%d ", high_alarm_temp);
+    canvas.printf("HighAlarm:%.2f",((float)high_alarm_temp)/100);
     canvas.setTextColor(BLUE);
-    canvas.printf("LowAlarm:%d", low_alarm_temp);
+    canvas.printf("LowAlarm:%.2f", ((float)low_alarm_temp)/100);
     canvas.setCursor(0, 120);
     canvas.setTextColor(WHITE);
     canvas.printf("Emissivity:");
@@ -98,7 +98,7 @@ void loop() {
     canvas.setTextColor(WHITE);
     canvas.printf("SocTemp:");
     canvas.setTextColor(GREEN);
-    canvas.printf("%d", temperature_soc);
+    canvas.printf("%.2f", ((float)temperature_soc)/100);
     canvas.setCursor(0, 180);
     canvas.setTextColor(WHITE);
     canvas.printf("Button:");
